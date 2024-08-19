@@ -1,0 +1,80 @@
+# This is a generated file. Not intended for manual editing.
+version: "3.4"
+services:
+  bff.web:
+    build:
+      context: "C:\\Users\\gwanjohi\\Documents\\Projects\\SDDemoDocker"
+      dockerfile: "BFF.Web/Dockerfile"
+      target: "base"
+    command: []
+    entrypoint:
+    - "dotnet"
+    - "/app/bin/Debug/net6.0/BFF.Web.dll"
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Development"
+      DOTNET_USE_POLLING_FILE_WATCHER: "true"
+    image: "bffweb:dev"
+    ports: []
+    volumes:
+    - "C:\\Users\\gwanjohi\\AppData\\Roaming\\Microsoft\\UserSecrets:/root/.microsoft/usersecrets"
+    - "C:\\Users\\gwanjohi\\.nuget\\packages:/root/.nuget/packages"
+    - "C:\\Users\\gwanjohi\\Documents\\Projects\\SDDemoDocker\\BFF.Web:/app:rw"
+    - "C:\\Users\\gwanjohi\\Documents\\Projects\\SDDemoDocker:/src:rw"
+    working_dir: "/app"
+  locationa.api:
+    build:
+      context: "C:\\Users\\gwanjohi\\Documents\\Projects\\SDDemoDocker"
+      dockerfile: "Locationa.API/Dockerfile"
+      target: "base"
+    command: []
+    entrypoint:
+    - "dotnet"
+    - "/app/bin/Debug/net6.0/LocationA.API.dll"
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Development"
+      DOTNET_USE_POLLING_FILE_WATCHER: "true"
+    image: "locationaapi:dev"
+    ports: []
+    volumes:
+    - "C:\\Users\\gwanjohi\\.nuget\\packages:/root/.nuget/packages"
+    - "C:\\Users\\gwanjohi\\Documents\\Projects\\SDDemoDocker\\LocationA.API:/app:rw"
+    - "C:\\Users\\gwanjohi\\Documents\\Projects\\SDDemoDocker:/src:rw"
+    working_dir: "/app"
+  locationb.api:
+    build:
+      context: "C:\\Users\\gwanjohi\\Documents\\Projects\\SDDemoDocker"
+      dockerfile: "LocationB.API/Dockerfile"
+      target: "base"
+    command: []
+    entrypoint:
+    - "dotnet"
+    - "/app/bin/Debug/net6.0/LocationB.API.dll"
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Development"
+      DOTNET_USE_POLLING_FILE_WATCHER: "true"
+    image: "locationbapi:dev"
+    ports: []
+    volumes:
+    - "C:\\Users\\gwanjohi\\.nuget\\packages:/root/.nuget/packages"
+    - "C:\\Users\\gwanjohi\\Documents\\Projects\\SDDemoDocker\\LocationB.API:/app:rw"
+    - "C:\\Users\\gwanjohi\\Documents\\Projects\\SDDemoDocker:/src:rw"
+    working_dir: "/app"
+  locationc.api:
+    build:
+      context: "C:\\Users\\gwanjohi\\Documents\\Projects\\SDDemoDocker"
+      dockerfile: "LocationC.API/Dockerfile"
+      target: "base"
+    command: []
+    entrypoint:
+    - "dotnet"
+    - "/app/bin/Debug/net6.0/LocationC.API.dll"
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Development"
+      DOTNET_USE_POLLING_FILE_WATCHER: "true"
+    image: "locationcapi:dev"
+    ports: []
+    volumes:
+    - "C:\\Users\\gwanjohi\\.nuget\\packages:/root/.nuget/packages"
+    - "C:\\Users\\gwanjohi\\Documents\\Projects\\SDDemoDocker\\LocationC.API:/app:rw"
+    - "C:\\Users\\gwanjohi\\Documents\\Projects\\SDDemoDocker:/src:rw"
+    working_dir: "/app"

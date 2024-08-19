@@ -19,7 +19,7 @@ namespace BFF.Web
 
             var routes = "";
 #if DEBUG
-            routes = "Routes.dev";
+            routes = "/c/Users/gwanjohi/Documents/Projects/SDDemoDocker/Routes.dev/";
 #else
 routes = "Routes.prod";
 #endif

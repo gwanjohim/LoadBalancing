@@ -10,8 +10,8 @@ services:
     hostname: eureka-server
     networks:
       - backend_network
-    #ports:
-    # - "8761:8761"
+    ports:
+     - "8761:8761"
 
   locationa.api:
     container_name: locationa.api
