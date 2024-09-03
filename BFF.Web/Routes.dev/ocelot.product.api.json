@@ -1,0 +1,27 @@
+
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/{everything}",
+      "DownstreamScheme": "http",
+      "SwaggerKey": "product",
+      "UseServiceDiscovery": true,
+      "ServiceName": "SERVICE.PRODUCTAPI",
+      "UpstreamPathTemplate": "/product/{everything}",
+      "UpstreamHttpMethod": [
+        "GET",
+        "POST",
+        "PUT",
+        "DELETE"
+      ],
+
+
+    
+
+      "LoadBalancerOptions": {
+        "Type": "LeastConnection"
+      }
+
+    }
+  ]
+}

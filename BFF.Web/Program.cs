@@ -17,15 +17,12 @@ namespace BFF.Web
             // Add services to the container.
 
 
-            var routes = "";
-#if DEBUG
-            routes = "Routes.dev/";
-#else
-routes = "Routes.prod";
-#endif
+            var routes = "C:/app/Routes.dev";
 
             builder.Configuration.AddOcelotWithSwaggerSupport(options =>
             {
+
+
                 options.Folder = routes;
 
             });
@@ -62,7 +59,8 @@ routes = "Routes.prod";
 
             app.UseAuthorization();
 
-            app.UseSwaggerForOcelotUI(options => {
+            app.UseSwaggerForOcelotUI(options =>
+            {
                 options.PathToSwaggerGenerator = "/swagger/docs";
                 options.ReConfigureUpstreamSwaggerJson = AlterUpstream.AlterUpstreamSwaggerJson;
             });
